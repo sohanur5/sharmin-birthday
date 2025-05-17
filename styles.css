@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #4facfe, #00f2fe); /* Blue and Green gradient background */
+  color: black; /* Text color set to black */
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  animation: gradient 5s ease infinite;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+  }
+  50% {
+    background: linear-gradient(45deg, #32c8d0, #5ffbf1);
+  }
+  100% {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+  }
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Blue and Green gradient */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2em;
+  color: black !important; /* Force black text for navbar links */
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00b3b3; /* Hover effect color */
+}
+
+/* Welcome message styles */
+.welcome-message h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-message p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Button animation */
+button {
+  padding: 15px 30px;
+  background-color: #4facfe; /* Button color matching gradient */
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  animation: bounceIn 1s ease-out;
+}
+
+button:hover {
+  background-color: #00f2fe; /* Hover effect color */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Blue and Green gradient */
+  color: black !important; /* Force black text for footer */
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: auto;
+}
+
+/* List styling for wish list */
+ul.list-group {
+  font-size: 1.5em;
+}
+
+ul.list-group li {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+ul.list-group li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Personal data page styling */
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1.1em;
+  }
+
+  .welcome-message h1 {
+    font-size: 2.5em;
+  }
+
+  .welcome-message p {
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
